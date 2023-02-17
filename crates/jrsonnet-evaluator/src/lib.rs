@@ -39,6 +39,10 @@
 	clippy::type_repetition_in_bounds,
 	// ci is being run with nightly, but library should work on stable
 	clippy::missing_const_for_fn,
+    // false positive for IStr type. There is an configuration option for
+    // such cases, but it doesn't work:
+    // https://github.com/rust-lang/rust-clippy/issues/9801
+    clippy::mutable_key_type,
 )]
 
 // For jrsonnet-macros
